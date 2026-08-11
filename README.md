@@ -2,7 +2,8 @@
 Website Edukasi anak all in one, yang mencakup seluruh kebutuhan edukasi dasar, mengenai literasi, berhitung, dan karakter .
 
 Tugas Kewajiban UAS Pemrogramman Web I
-Kelompok:
+
+Anggota Kelompok:
 - Reylucha Biel
 - Muhammad Nur
 - Muhammad Ilham

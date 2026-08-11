@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Literasi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Quicksand for a kid-friendly look -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+    </style>
+</head>
+<body class="bg-sky-50 text-gray-800">
+
+    <!-- 1. NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-sky-500">📚 Literasi<span class="text-orange-500">Ceria</span></a><p style="margin-left: 120px;"><strong>UAS TIME!</strong></p>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 font-semibold text-gray-600">
+                    <a href="#home" class="hover:text-sky-500 transition">Home</a>
+                    <a href="#abc" class="hover:text-orange-500 transition">ABC</a>
+                    <a href="#buku" class="hover:text-green-500 transition">Buku Cerita</a>
+                    <a href="#audio" class="hover:text-purple-500 transition">Cerita Audio</a>
+                    <a href="#video" class="hover:text-red-500 transition">Video Literasi</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-sky-500 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center font-semibold">
+                <a href="#home" class="block px-3 py-2 text-sky-500">Home</a>
+                <a href="#abc" class="block px-3 py-2 text-orange-500">ABC</a>
+                <a href="#buku" class="block px-3 py-2 text-green-500">Buku Cerita</a>
+                <a href="#audio" class="block px-3 py-2 text-purple-500">Cerita Audio</a>
+                <a href="#video" class="block px-3 py-2 text-red-500">Video Literasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HOME / HERO SECTION -->
+    <section id="home" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="overflow-hidden rounded-3xl shadow-xl relative bg-sky-200">
+            <!-- Carousel Container -->
+            <div id="hero-carousel" class="flex transition-transform duration-500 ease-out h-[400px]">
+                <!-- Slide 1 -->
+                <div class="min-w-full flex items-center justify-center bg-sky-300 relative">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=80" alt="Anak membaca" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <div class="relative text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-sky-900 mb-4 drop-shadow-md">Ayo Membaca Bersama!</h1>
+                        <p class="text-lg md:text-2xl text-sky-800 font-semibold">Buku adalah jendela dunia.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full flex items-center justify-center bg-orange-300 relative">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1000&q=80" alt="Belajar bersama" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <div class="relative text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-orange-900 mb-4 drop-shadow-md">Kenali Huruf A-Z</h1>
+                        <p class="text-lg md:text-2xl text-orange-800 font-semibold">Belajar huruf sambil bermain.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full flex items-center justify-center bg-green-300 relative">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Mendengarkan cerita" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <div class="relative text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-green-900 mb-4 drop-shadow-md">Dengarkan Cerita Seru</h1>
+                        <p class="text-lg md:text-2xl text-green-800 font-semibold">Imajinasi tanpa batas dengan audio visual.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Indicators -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2" id="hero-dots"></div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION ABC -->
+    <section id="abc" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-orange-500 mb-2">Mari Belajar ABC 🅰️</h2>
+            <p class="text-gray-600 text-lg">Klik kotak di bawah untuk mendengarkan hurufnya!</p>
+        </div>
+        <div id="abc-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Disisipkan via JS -->
+        </div>
+    </section>
+
+    <!-- 4. SECTION BUKU CERITA -->
+    <section id="buku" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-green-50 rounded-3xl my-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-green-600 mb-2">Buku Cerita Anak 📖</h2>
+            <p class="text-gray-600 text-lg">Geser untuk memilih buku, lalu klik BACA!</p>
+        </div>
+        
+        <!-- BOOK CAROUSEL -->
+        <div class="relative">
+
+            <!-- Tombol kiri -->
+            <button
+                id="book-prev"
+                type="button"
+                aria-label="Buku sebelumnya"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-10
+                    bg-white hover:bg-green-100
+                    text-green-600
+                    w-12 h-12
+                    rounded-full
+                    shadow-lg
+                    border-2 border-green-200
+                    flex items-center justify-center
+                    text-2xl font-bold
+                    transition hover:scale-110"
+            >
+                &#8592;
+            </button>
+
+
+            <!-- Container Buku -->
+            <div
+                id="book-container"
+                class="flex overflow-x-auto gap-6
+                    px-14 pb-8
+                    snap-x snap-mandatory
+                    no-scrollbar
+                    scroll-smooth"
+            >
+                <!-- Buku dibuat otomatis oleh JavaScript -->
+            </div>
+
+
+            <!-- Tombol kanan -->
+            <button
+                id="book-next"
+                type="button"
+                aria-label="Buku berikutnya"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-10
+                    bg-white hover:bg-green-100
+                    text-green-600
+                    w-12 h-12
+                    rounded-full
+                    shadow-lg
+                    border-2 border-green-200
+                    flex items-center justify-center
+                    text-2xl font-bold
+                    transition hover:scale-110"
+            >
+                &#8594;
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Modal Interactive Book Reader -->
+    <div id="book-modal" class="fixed inset-0 z-[100] bg-black bg-opacity-80 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden relative">
+            <!-- Header Modal -->
+            <div class="bg-green-500 text-white p-4 flex justify-between items-center">
+                <h3 id="modal-book-title" class="text-xl font-bold">Judul Buku</h3>
+                <button onclick="closeBook()" class="text-white hover:text-red-200 font-bold text-2xl">&times;</button>
+            </div>
+            <!-- Content Area (Page) -->
+            <div class="flex-grow p-4 md:p-8 text-center flex flex-col justify-center bg-amber-50 overflow-auto">
+                <img
+                    id="modal-book-img"
+                    src=""
+                    alt=""
+                    class="max-h-[60vh] max-w-full mx-auto rounded-xl shadow-md mb-6 object-contain"
+                >
+
+                <p
+                    id="modal-book-text"
+                    class="text-xl md:text-3xl text-gray-800 font-semibold leading-relaxed"
+                ></p>
+
+            </div>
+            <!-- Footer Controls -->
+            <div class="bg-gray-100 p-4 flex justify-between items-center">
+                <button onclick="prevPage()" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2 rounded-full font-bold shadow-md transition">&larr; Sebelumnya</button>
+                <span id="modal-page-num" class="font-bold text-gray-500">Hal 1/3</span>
+                <button onclick="nextPage()" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-bold shadow-md transition">Selanjutnya &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. SECTION CERITA AUDIO -->
+    <section id="audio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-purple-600 mb-2">Cerita Audio 🎧</h2>
+            <p class="text-gray-600 text-lg">Gulir ke bawah untuk mencari cerita kesukaanmu.</p>
+        </div>
+        
+        <!-- Vertical Scroll Container -->
+        <div class="max-w-2xl mx-auto h-96 overflow-y-auto no-scrollbar space-y-4 pr-2" id="audio-container">
+            <!-- Disisipkan via JS -->
+        </div>
+    </section>
+
+    <!-- 6. SECTION VIDEO LITERASI -->
+    <section
+        id="video"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12
+            bg-red-50 rounded-3xl my-8"
+    >
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-red-600 mb-2">
+                Video Literasi 📺
+            </h2>
+
+            <p class="text-gray-600 text-lg">
+                Geser untuk memilih video edukasi yang seru!
+            </p>
+
+        </div>
+
+
+        <!-- Video Carousel -->
+        <div class="relative">
+
+            <!-- Tombol Sebelumnya -->
+            <button
+                id="video-prev"
+                type="button"
+                aria-label="Video sebelumnya"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-10
+                    bg-white hover:bg-red-100
+                    text-red-600
+                    w-12 h-12
+                    rounded-full
+                    shadow-lg
+                    border-2 border-red-200
+                    flex items-center justify-center
+                    text-2xl font-bold
+                    transition hover:scale-110"
+            >
+                &#8592;
+            </button>
+
+
+            <!-- Container Video -->
+            <div
+                id="video-container"
+                class="flex overflow-x-auto gap-6
+                    px-14 pb-8
+                    snap-x snap-mandatory
+                    no-scrollbar
+                    scroll-smooth"
+            >
+                <!-- Video dibuat otomatis oleh JavaScript -->
+            </div>
+
+
+            <!-- Tombol Berikutnya -->
+            <button
+                id="video-next"
+                type="button"
+                aria-label="Video berikutnya"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-10
+                    bg-white hover:bg-red-100
+                    text-red-600
+                    w-12 h-12
+                    rounded-full
+                    shadow-lg
+                    border-2 border-red-200
+                    flex items-center justify-center
+                    text-2xl font-bold
+                    transition hover:scale-110"
+            >
+                &#8594;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Deskripsi -->
+                <div>
+                    <h3 class="text-2xl font-bold text-sky-400 mb-4">📚 Literasi<span class="text-orange-400">Ceria</span></h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Halaman ini adalah bagian dari Web App EduAnak, Pada Halaman Ini Membahas Seputar Edukasi Literasi Anak</p>
+                </div>
+                <!-- Menu Cepat -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#abc" class="hover:text-white transition">Pengenalan ABC</a></li>
+                        <li><a href="#buku" class="hover:text-white transition">Buku Cerita Interaktif</a></li>
+                        <li><a href="#video" class="hover:text-white transition">Video Edukasi</a></li>
+                    </ul>
+                </div>
+                <!-- Kontak -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Identitas Mahasiswa</h4>
+                    <p class="text-gray-400 text-sm">Dibuat oleh: <span class="text-white font-semibold">Reylucha Biel</span></p>
+                    <p class="text-gray-400 text-sm">Mata Kuliah: Pemrogramman Web 1</p>
+                    <p class="text-gray-400 text-sm">Kelas: IF208</p>
+                    <p class="text-gray-400 text-sm">Prodi: Informatika</p>
+                    <p class="text-gray-400 text-sm">NIM: 250401010551</p>
+                    <p class="text-gray-400 text-sm">Dosen: Riad Sahara, S.SI, MT.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                &copy; EduAnak 2026 Copyright. All Right Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

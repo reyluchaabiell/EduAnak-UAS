@@ -1,0 +1,105 @@
+/*bagian awal*/
+body {
+    background-color: #fdeacd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+    background: linear-gradient(90deg, #0d0e15 0%, #29388c 100%);
+}
+
+.logo-box {
+    background-color: #b3b9ed;
+    border-radius: 12px;
+    padding: 8px 15px;
+    display: inline-block;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.number-card {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-satuan { background-color: #ff5252; }
+.card-puluhan { background-color: #ffeb3b; }
+.card-ratusan { background-color: #00c853; }
+.card-ribuan { background-color: #2979ff; }
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.card-title-custom {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*bagian Kedua*/
+.card-aturan {
+    background-color: #51f76c;
+    color: black;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.card-aturan:hover {
+    transform: translateY(-5px);
+}
+
+.step-badge {
+    background-color: #0d2a80;
+    color: #f7dd4e;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.rule-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rule-desc {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/*bagian Ketiga*/
+.card-operasi {
+    background-color: #0d2a80;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.op-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
